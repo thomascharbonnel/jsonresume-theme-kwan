@@ -1,38 +1,64 @@
 @media print {
+
+    body {
+        font-size: 10pt;
+    }
+
     a[href]:after {
         content: none !important;
     }
 
-    .profile-card {
-        text-align: center;
-    }
-
-    .profile-pic {
-        display: inline-block;
-        vertical-align: middle;
-        img {
-            border-radius: 0;
-        }
-    }
-
-    .name-and-profession {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 15px;
-    }
-
-    .contact-details {
-        .detail {
-            .make-xs-column(3);
-            padding: 0;
-        }
-    }
-
-    .floating-nav, .floating-nav-trigger {
-        display: none;
-    }
-
     .pagebreak {
         page-break-before: always;
+    }
+
+    .card {
+        border: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        width: 100%;
+    }
+    .contact-details .detail .icon {
+        color: #888 !important;
+    }
+    .background-card h4 {
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+        margin-top: 1em !important;
+    }
+    h4 > .fa {
+        display: none !important;
+    }
+    .card-nested {
+        padding-left: 0;
+    }
+    .labels {
+        display: inline;
+    }
+    .skill-info {
+        margin-left: 0;
+    }
+    .skill-info > strong:after {
+        content: ": ";
+    }
+    .label-keyword {
+        display: inline;
+        border: 0;
+        padding: 0;
+        font-weight: normal;
+        font-size: inherit;
+
+        &:not(last-child):after {
+            content: ", ";
+        }
+    }
+    .card-skills {
+        padding: 0;
+    }
+    blockquote {
+        font-size: 100%;
     }
 }

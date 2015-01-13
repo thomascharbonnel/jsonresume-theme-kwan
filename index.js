@@ -192,6 +192,9 @@ function render(resume) {
         }
     });
 
+    Handlebars.registerHelper('lowercase', function(text) {
+        return text.toLowerCase();
+    })
     return Handlebars.compile(template)({
         css: css,
         resume: resume
