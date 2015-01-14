@@ -57,10 +57,10 @@
 
 .fa-github {.make-social-link(@github-color); }
 .fa-twitter {.make-social-link(@twitter-color); }
-.fa-blog {.make-social-link(@rss-feed-color); }
+.fa-rss {.make-social-link(@rss-feed-color); }
 .fa-linkedin {.make-social-link(@linkedin-color); }
 .fa-skype {.make-social-link(@skype-color); }
-.fa-stackoverflow {.make-social-link(@stackoverflow-color); }
+.fa-stack-overflow {.make-social-link(@stackoverflow-color); }
 .fa-soundcloud {.make-social-link(@soundcloud-color); }
 .fa-pinterest { .make-social-link(@pinterest-color); }
 .fa-vimeo { .make-social-link(@vimeo-color); }
@@ -73,6 +73,7 @@
 .fa-facebook { .make-social-link(@facebook-color); }
 .fa-angellist { .make-social-link(@angellist-color); }
 .fa-bitbucket { .make-social-link(@bitbucket-color); }
+.fa-google-plus { .make-social-link(@google-plus-color); }
 
 .background-card h4 {
     font-variant: small-caps;
@@ -116,6 +117,13 @@ h4 > .fa {
 
 .card-wrapper {
     padding: 5px;
+}
+
+.enumeration:not(:last-child):after {
+    content: ", ";
+}
+.enumeration:last-child:after {
+    content: ".";
 }
 
 @media only screen and (max-width: @screen-tablet) {

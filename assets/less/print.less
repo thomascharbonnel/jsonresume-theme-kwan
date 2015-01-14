@@ -12,6 +12,10 @@
         page-break-before: always;
     }
 
+    .background-card h4:not(:first-child) {
+        margin-top: 0 !important;
+    }
+
     .card {
         border: 0;
         padding: 0;
@@ -33,7 +37,7 @@
         display: none !important;
     }
     .card-nested {
-        padding-left: 0;
+        padding: .5rem 0 .5rem 0;
     }
     .labels {
         display: inline;
@@ -41,23 +45,7 @@
     .skill-info {
         margin-left: 0;
     }
-    .skill-info > strong:after {
-        content: ": ";
-    }
-    .label-keyword {
-        display: inline;
-        border: 0;
-        padding: 0;
-        font-weight: normal;
-        font-size: inherit;
-
-        &:not(last-child):after {
-            content: ", ";
-        }
-    }
-    .card-skills {
-        padding: 0;
-    }
+    
     blockquote {
         font-size: 100%;
     }

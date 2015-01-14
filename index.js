@@ -192,8 +192,8 @@ function render(resume) {
         }
     });
 
-    Handlebars.registerHelper('lowercase', function(text) {
-        return text.toLowerCase();
+    Handlebars.registerHelper('toClassName', function(text) {
+        return text.toLowerCase().replace(/ /, '-');
     })
     return Handlebars.compile(template)({
         css: css,

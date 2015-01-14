@@ -1,14 +1,16 @@
+#!/usr/bin/node
 //
 // This script will run a local development server. This is useful when
 // developing the theme.
 //
 // Usage:
-// `node serve`
-//
+// `serve.js` to use the default JSONResume example
+// `serve.js <filename>` to open a particular resume file 
 
 var http = require("http");
-var resume = require("resume-schema").resumeJson;
 var theme = require("./index.js");
+var fs = require('fs');
+var args = require('optimist').argv;
 
 var port = 8888;
 http.createServer(function(req, res) {
@@ -23,6 +25,7 @@ console.log("Serving..");
 
 function render() {
     try {
+        var resume = args._.length? JSON.parse(fs.readFileSync(args._[0], 'utf8')) : require("resume-schema").resumeJson;
         return theme.render(resume);
     } catch (e) {
         console.log(e.message);
