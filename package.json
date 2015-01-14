@@ -1,26 +1,20 @@
 {
-  "name": "jsonresume-theme-elegant",
-  "version": "0.9.2",
-  "description": "Elegant theme for jsonresume",
+  "name": "jsonresume-theme-kwan",
+  "version": "0.0.1",
+  "description": "Kwan theme for jsonresume. Other resumes may have the coin, but they won't have the 'Kwan'.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant.git"
+    "url": "https://github.com/icoloma/jsonresume-theme-kwan.git"
   },
   "keywords": [
     "jsonresume",
     "theme",
-    "elegant"
+    "kwan"
   ],
-  "author": "Mudassir Ali <mudassir.dev@gmail.com>",
+  "author": "Nacho Coloma <icoloma@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant/issues"
-  },
-  "homepage": "https://github.com/mudassir0909/jsonresume-theme-elegant",
+  "homepage": "https://github.com/icoloma/jsonresume-theme-kwan",
   "dependencies": {
     "gravatar": "^1.0.6",
     "handlebars": "^2.0.0-alpha.4",

@@ -1,8 +1,10 @@
 # Kwan Theme 
 
-This is a fork from [Elegant Theme](https://github.com/mudassir0909/jsonresume-theme-elegant) modified to improve print styles and in general make lots of changes.
+This is a fork from [Elegant Theme](https://github.com/mudassir0909/jsonresume-theme-elegant) by Mudassir Ali, modified to improve print styles and in general simplify things. 
 
 [Theme Preview](http://themes.jsonresume.org/kwan)
+
+Other resumes may have the coin, but they won't have the 'Kwan'.
 
 ### To develop your resume
 

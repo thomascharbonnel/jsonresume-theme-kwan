@@ -90,7 +90,7 @@ function render(resume) {
                         "codepen", "foursquare", "reddit", "spotify",
                         "dribble", "dribbble", "facebook", "angellist",
                         "bitbucket", "skype"],
-        date_format = 'MMM, YYYY';
+        date_format = 'MMM YYYY';
 
     if (!resume.basics.picture && hasEmail(resume)) {
         resume.basics.picture = gravatar.url(resume.basics.email.replace('(at)', '@'), {
@@ -161,7 +161,7 @@ function render(resume) {
 
     _.each( resume.awards, function( award_info ) {
         if ( award_info.date ) {
-            award_info.date = moment( new Date( award_info.date ) ).format( 'MMM DD, YYYY' )
+            award_info.date = moment( new Date( award_info.date ) ).format( date_format )
         }
     });
 
