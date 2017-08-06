@@ -126,6 +126,29 @@ function render(resume) {
         }
     });
 
+    _.each( resume.projects, function( project_info ) {
+        var did_leave_project,
+            start_date = project_info.startDate && new Date( project_info.startDate ),
+            end_date = project_info.endDate && new Date( project_info.endDate );
+
+        if ( start_date ) {
+            project_info.startDate = moment( start_date ).format( date_format );
+        }
+
+        if ( end_date ) {
+            project_info.endDate = moment( end_date ).format( date_format );
+        }
+
+        did_leave_project = !! end_date;
+
+        if ( start_date ) {
+            end_date = end_date || new Date();
+            project_info.duration = humanizeDuration(
+                moment.duration( end_date.getTime() - start_date.getTime() ),
+                did_leave_project )
+        }
+    });
+
     _.each( resume.skills, function( skill_info ) {
         var levels = [ 'Beginner', 'Intermediate', 'Advanced', 'Master' ];
 

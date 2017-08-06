@@ -127,6 +127,38 @@
               {{/each}}
             </ul>
 
+            <h4 id="projects"> <span class="fa fa-lg fa-code-fork"></span> <span class="title">Projects</span> </h4>
+            <ul class="list-unstyled">
+              {{#each resume.projects}}
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      {{#if url}}<a href="{{url}}" target="_blank">{{name}}</a>{{else}}{{name}}{{/if}},
+                      <strong>{{roles}}</strong>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> {{startDate}} - {{#if endDate}} {{endDate}} {{else}} Present {{/if}} </span>
+                        {{#if duration}} <span> <i class="fa fa-clock-o icon-left"></i> {{duration}} </span> {{/if}}
+                      </small>
+                    </p>
+                    <p>{{summary}}</p>
+                    {{#if highlights}}
+                      <ul>
+                        {{#each highlights}}
+                        <li> {{{.}}} </li>
+                        {{/each}}
+                      </ul>
+                    {{/if}}
+                    <div class="space-top labels">
+                      {{#keywords}} <span class="label label-keyword">{{.}}</span> {{/keywords}}
+                    </div>
+                  </div>
+
+                </li>
+              {{/each}}
+            </ul>
+
             <h4 id="skills"> <span class="fa fa-lg fa-code"></span> <span class="title">Skills</span> </h4>
             <ul class="list-unstyled">
               {{#each resume.skills}}
